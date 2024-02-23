@@ -11,15 +11,11 @@ namespace Game.Scripts.Game.WheelSpin
         [SerializeField] private UniversalPanel wheelSpinPanel;
         [SerializeField] private PanelMachine panelMachine;
         [SerializeField] private WheelSectorData coinData;
-        [SerializeField] private WheelSectorData oopsData;
-        [SerializeField] private WheelSectorData playOnData;
         [SerializeField] private WheelSectorData plusSpinData;
 
         public Action OnStartSpin { get; set; }
         public Action OnEndSpin { get; set; }
         public Action<WheelSector> OnWinCoin { get; set; }
-        public Action<WheelSector> OnWinOops { get; set; }
-        public Action<WheelSector> OnWinPlayOn { get; set; }
         public Action<WheelSector> OnWinPlusSpin { get; set; }
 
         public void OpenWheelSpin()
@@ -47,16 +43,6 @@ namespace Game.Scripts.Game.WheelSpin
             if (wheelSector.WheelSectorData == coinData)
             {
                 OnWinCoin?.Invoke(wheelSector);
-            }
-
-            if (wheelSector.WheelSectorData == oopsData)
-            {
-                OnWinOops?.Invoke(wheelSector);
-            }
-
-            if (wheelSector.WheelSectorData == playOnData)
-            {
-                OnWinPlayOn?.Invoke(wheelSector);
             }
 
             if (wheelSector.WheelSectorData == plusSpinData)

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ShopElement1
   m_EditorClassIdentifier: 
   _price: 0
+  _levelTheme: {fileID: 21300000, guid: faf99a4b4df684c349d34f8c7c21de13, type: 3}

@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f69c59a7aa89498d9cb8be393b58468, type: 3}
-  m_Name: ShopElement5
+  m_Script: {fileID: 11500000, guid: 61e6066e412e40168fb95b346d37e5dc, type: 3}
+  m_Name: UnityAdsSettings
   m_EditorClassIdentifier: 
-  _price: 350
+  GameIdAndroid: 5538750
+  GameIdIos: 5538751
+  TestMode: 1

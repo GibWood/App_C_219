@@ -7,10 +7,12 @@ namespace Game.Scripts.Game.ShopLogic
     public class ShopElementData : ScriptableObject
     {
         [SerializeField] private int _price;
+        [SerializeField] private Sprite _levelTheme;
 
         private string _hasOpenAlias = "hasOpenAlias";
 
         public int Price => _price;
+        public Sprite LevelTheme => _levelTheme;
 
         public bool HasOpen
         {

@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f69c59a7aa89498d9cb8be393b58468, type: 3}
-  m_Name: ShopElement4
+  m_Script: {fileID: 11500000, guid: cefb49dfe0bb4b1d94ced5050bf79b5e, type: 3}
+  m_Name: SpinData
   m_EditorClassIdentifier: 
-  _price: 300

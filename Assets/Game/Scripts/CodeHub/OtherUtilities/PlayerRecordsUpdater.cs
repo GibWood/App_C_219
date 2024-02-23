@@ -9,11 +9,17 @@ namespace CodeHub.OtherUtilities
         [SerializeField] private PlayerDatabase _playerDatabase;
         [SerializeField] private List<TMP_Text> _playerRecordsTxt;
 
-        public void UpdatePlayerRecordsTxt()
+        private void Start()
+        {
+            _playerDatabase.OnPlayerRecordChange += UpdatePlayerRecordsTxt;
+            UpdatePlayerRecordsTxt(_playerDatabase.PlayerRecord);
+        }
+
+        private void UpdatePlayerRecordsTxt(int value)
         {
             foreach (var playerRecordTxt in _playerRecordsTxt)
             {
-                if (playerRecordTxt != null) playerRecordTxt.text = _playerDatabase.PlayerScore + "";
+                if (playerRecordTxt != null) playerRecordTxt.text = value.ToString();
             }
         }
     }

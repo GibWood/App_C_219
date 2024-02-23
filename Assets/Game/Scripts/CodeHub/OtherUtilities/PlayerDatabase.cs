@@ -7,7 +7,7 @@ namespace CodeHub.OtherUtilities
     public class PlayerDatabase : ScriptableObject
     {
         private const string playerBalanceAlias = "playerBalanceAlias";
-        private const string playerMoneyAlias = "playerMoneyAlias";
+        private const string playerCrystalAlias = "playerCrystalAlias";
         private const string playerScoreAlias = "playerScoreAlias";
 
         private const string hasEnableSoundAlias = "hasSoundAlias";
@@ -22,30 +22,30 @@ namespace CodeHub.OtherUtilities
         private const string currentSkinNumberAlias = "currentSkinNumberAlias";
         private const string bonusGameAlias = "bonusGameAlias";
 
-        private const string hasEnemyPackAlias = "hasEnemyPackAlias";
+        private const string hasTutorialAlias = "HasSeenFirstTutorial";
         private const string recordTimeAlias = "recordTimeAlias";
         private const string recordCountAlias = "recordCountAlias";
 
         private int bonusCooldownHours = 24;
 
         public Action<int> OnPlayerBalanceChange;
-        public Action<int> OnPlayerMoneyChange;
+        public Action<int> OnPlayerCrystalChange;
         public Action<int> OnPlayerRecordChange;
 
-        public int PlayerMoney
+        public int PlayerCrystal
         {
-            get => PlayerPrefs.GetInt(playerMoneyAlias, 0);
+            get => PlayerPrefs.GetInt(playerCrystalAlias, 0);
             set
             {
-                PlayerPrefs.SetInt(playerMoneyAlias, value);
+                PlayerPrefs.SetInt(playerCrystalAlias, value);
                 PlayerPrefs.Save();
-                OnPlayerMoneyChange?.Invoke(value);
+                OnPlayerCrystalChange?.Invoke(value);
             }
         }
 
         public int PlayerBalance
         {
-            get => PlayerPrefs.GetInt(playerBalanceAlias, 100000);
+            get => PlayerPrefs.GetInt(playerBalanceAlias, 2000);
             private set
             {
                 PlayerPrefs.SetInt(playerBalanceAlias, value);
@@ -72,7 +72,7 @@ namespace CodeHub.OtherUtilities
         
         public void IncreasePlayerMoney(int value)
         {
-            PlayerMoney += value;
+            PlayerCrystal += value;
         }
 
         public int PlayerScore
@@ -198,12 +198,12 @@ namespace CodeHub.OtherUtilities
             return false;
         }
         
-        public bool HasEnemyPack
+        public bool HasSeenTutorial
         {
-            get => Convert.ToBoolean(PlayerPrefs.GetString(hasEnemyPackAlias, "False"));
+            get => Convert.ToBoolean(PlayerPrefs.GetString(hasTutorialAlias, "False"));
             set
             {
-                PlayerPrefs.SetString(hasEnemyPackAlias, value.ToString());
+                PlayerPrefs.SetString(hasTutorialAlias, value.ToString());
                 PlayerPrefs.Save();
             }
         }

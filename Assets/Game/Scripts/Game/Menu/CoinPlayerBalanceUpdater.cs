@@ -10,7 +10,7 @@ namespace Game.Scripts.Game.Menu
         [SerializeField] private PlayerDatabase _playerDatabase;
         [SerializeField] private List<TMP_Text> _playerBalanceTxt;
 
-        public void Initialize()
+        private void Start()
         {
             _playerDatabase.OnPlayerBalanceChange += UpdatePlayerBalanceTxtByValue;
             UpdatePlayerBalanceTxtByValue(_playerDatabase.PlayerBalance);
@@ -20,10 +20,7 @@ namespace Game.Scripts.Game.Menu
         {
             foreach (var playerBalanceTxt in _playerBalanceTxt)
             {
-                if (playerBalanceTxt != null)
-                {
-                    playerBalanceTxt.text = "<sprite=0>" + value + "<sprite=1>";
-                }
+                if (playerBalanceTxt != null) playerBalanceTxt.text = value.ToString();
             }
         }
     }

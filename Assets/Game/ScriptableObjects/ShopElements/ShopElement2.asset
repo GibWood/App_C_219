@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f69c59a7aa89498d9cb8be393b58468, type: 3}
   m_Name: ShopElement2
   m_EditorClassIdentifier: 
-  _price: 200
+  _price: 500
+  _levelTheme: {fileID: 21300000, guid: 8b99fb09150224482b23528af6e72116, type: 3}

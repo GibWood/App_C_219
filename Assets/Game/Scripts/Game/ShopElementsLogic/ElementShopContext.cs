@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using CodeHub.OtherUtilities;
@@ -10,9 +11,6 @@ namespace Game.Scripts.Game.ShopLogic
     public class ElementShopContext : MonoBehaviour
     {
         [SerializeField] private PlayerDatabase _playerDatabase;
-        
-        [SerializeField] private PanelMachine _panelMachine;
-        [SerializeField] private PanelBase _buyPanel;
         
         [SerializeField] private ShopElementContextData _contextData;
         [SerializeField] private List<ElementShopBtn> _shopBtns;
@@ -29,6 +27,11 @@ namespace Game.Scripts.Game.ShopLogic
 
         private ElementShopBtn _currentShopElementBtn;
 
+        private void Start()
+        {
+            Initialize();
+        }
+
         public void Initialize()
         {
             InitializeShopElements();
@@ -36,19 +39,14 @@ namespace Game.Scripts.Game.ShopLogic
             _animationService = new AnimationService();
         }
 
-        public void TryBuyCurrentShopElement()
-        {
-            TryBuyElement(_currentShopElementBtn);
-        }
-        
         private void ClickOnBuyShopElement(ElementShopBtn elementBtn)
         {
             _currentShopElementBtn = elementBtn;
-            _panelMachine.AddPanel(_buyPanel);
-            
+            TryBuyElement(_currentShopElementBtn);
+
             _click.Play();
         }
-        
+
         private void TryBuyElement(ElementShopBtn elementBtn)
         {
             int price = elementBtn.ElementData.Price;
@@ -57,8 +55,7 @@ namespace Game.Scripts.Game.ShopLogic
                 _playerDatabase.IncreasePlayerBalance(-price);
                 elementBtn.ElementData.HasOpen = true;
                 Select(elementBtn);
-                
-                _panelMachine.CloseLastPanel();
+
                 _successBuy.Play();
             }
             else
@@ -72,7 +69,7 @@ namespace Game.Scripts.Game.ShopLogic
         {
             _contextData.SetCurrentElement(elementBtn.ElementData);
             UpdateUiShopElements();
-            
+
             _click.Play();
             _onElementSelected?.Invoke();
         }
