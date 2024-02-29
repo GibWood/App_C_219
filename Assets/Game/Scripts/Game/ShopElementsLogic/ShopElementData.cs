@@ -1,4 +1,5 @@
 using System;
+using Game.Scripts.Game.CoreGame.Level;
 using UnityEngine;
 
 namespace Game.Scripts.Game.ShopLogic
@@ -8,11 +9,13 @@ namespace Game.Scripts.Game.ShopLogic
     {
         [SerializeField] private int _price;
         [SerializeField] private Sprite _levelTheme;
+        [SerializeField] private LevelPart _levelPrefab;
 
         private string _hasOpenAlias = "hasOpenAlias";
 
         public int Price => _price;
         public Sprite LevelTheme => _levelTheme;
+        public LevelPart LevelPrefab => _levelPrefab;
 
         public bool HasOpen
         {

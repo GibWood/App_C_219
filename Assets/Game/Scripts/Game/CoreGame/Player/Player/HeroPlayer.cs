@@ -1,4 +1,3 @@
-using CodeHub.OtherUtilities;
 using UnityEngine;
 
 namespace Game.Scripts.Game.CoreGame.Player.Player
@@ -13,21 +12,18 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
         [SerializeField] private SpinePlatformerAnimation2D _spinePlatformerAnimation2D;
 
         private PlayerData _playerData;
-        private CameraFollower _cameraFollower;
         private CameraShaker _cameraShaker;
         
         public PlayerData PlayerData => _playerData;
-        public CameraFollower CameraFollower => _cameraFollower;
         public HeroPlayerAudioContext HeroPlayerAudioContext => _heroPlayerAudioContext;
         public Rigidbody2D Rigidbody2D => _rigidbody2D;
         public PlatformerMotor2D Motor2D => _motor2D;
         
 
-        public void Initialize(int maxHp, CameraFollower cameraFollower)
+        public void Initialize(int maxHp, CameraShaker cameraShaker)
         {
             _playerData = new PlayerData(maxHp);
-            _cameraFollower = cameraFollower;
-            _cameraShaker = CameraFollower.GetComponent<CameraShaker>();
+            _cameraShaker = cameraShaker;
         }
 
         public void GetDamage(int value = -1)
