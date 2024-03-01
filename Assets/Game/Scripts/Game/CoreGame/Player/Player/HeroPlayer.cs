@@ -30,7 +30,7 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
         {
             PlayerData.IncreaseHp(value);
 
-            _spinePlatformerAnimation2D.PlayHitAnimation();
+            //_spinePlatformerAnimation2D.PlayHitAnimation();
 
             _cameraShaker.Shake();
 

@@ -11,7 +11,7 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
 
         public void PlayPlayerHitAudio()
         {
-            PlayAudio(_hitPlayerAudio);
+            //PlayAudio(_hitPlayerAudio);
         }
 
         public void PlayDeadPlayerAudio()
@@ -21,7 +21,7 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
 
         public void PlayGoldTakeAudio()
         {
-            PlayAudio(_coinTakeAudio);
+            //PlayAudio(_coinTakeAudio);
         }
 
         private void PlayAudio(AudioSource audioSource)

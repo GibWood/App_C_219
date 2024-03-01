@@ -1,16 +1,17 @@
-using System;
+using System.Collections.Generic;
 using CodeHub.OtherUtilities;
 using Game.Mephistoss.PanelMachine.Scripts;
+using Game.Scripts.Game.CoreGame.Player.Player;
 using TMPro;
 using Tools.Core.UnityAdsService.Scripts;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Game.Scripts.Game.CoreGame
 {
     public class GameOverContext : MonoBehaviour
     {
         [SerializeField] private PlayerDatabase _playerDatabase;
+        [SerializeField] private HeroPlayer _heroPlayer;
 
         [SerializeField] private PanelMachine _panelMachine;
         [SerializeField] private UniversalPanel _gameOverPanel;
@@ -24,6 +25,9 @@ namespace Game.Scripts.Game.CoreGame
         [SerializeField] private TMP_Text _watchAdsTxtTxt;
         [SerializeField] private UnityAdsButton _watchAdsBtn;
 
+        [SerializeField] private List<GameObject> _adsObjects;
+        [SerializeField] private List<GameObject> _getRewardsObjects;
+
         private int _crystalCount;
         private int _coinsCount;
 
@@ -35,18 +39,18 @@ namespace Game.Scripts.Game.CoreGame
         public void AddGameOverPanel()
         {
             _panelMachine.AddPanel(_gameOverPanel);
-            
-            _crystalCount = 10;//todo get crystal from game
+
+            _crystalCount = _heroPlayer.PlayerData.Golds; //todo get crystal from game
             _coinsCount = _crystalCount * _multiplyCoins;
             UpdateUI();
-            
+
             ClaimCoinsReward();
             UpdateDataCrystal();
         }
 
         private void UpdateDataCrystal()
         {
-            if (_crystalCount > _playerDatabase.PlayerCrystal) 
+            if (_crystalCount > _playerDatabase.PlayerCrystal)
                 _playerDatabase.PlayerCrystal = _crystalCount;
         }
 
@@ -63,18 +67,26 @@ namespace Game.Scripts.Game.CoreGame
             _crystalNewRecordMark.gameObject.SetActive(_crystalCount > _playerDatabase.PlayerCrystal);
         }
 
-        private void UpdateCoinsUI() => 
+        private void UpdateCoinsUI() =>
             _coinsCountTxt.text = _coinsCount.ToString();
 
-        private void UpdateAdsTxtUI() => 
+        private void UpdateAdsTxtUI() =>
             _watchAdsTxtTxt.text = $"Watch the ad and get {_coinsCount * 2} <sprite=0>";
 
         private void ClaimRewardFromAds()
         {
             ClaimCoinsReward();
+            _coinsCount *= 2;
+            UpdateCoinsUI();
 
             _watchAdsBtn.gameObject.SetActive(false);
             _watchAdsTxtTxt.gameObject.SetActive(false);
+
+            foreach (var adsObject in _adsObjects)
+                adsObject.gameObject.SetActive(false);
+
+            foreach (var rewardObjects in _getRewardsObjects)
+                rewardObjects.gameObject.SetActive(true);
         }
 
         private void ClaimCoinsReward() =>

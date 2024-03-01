@@ -4,8 +4,18 @@ namespace CodeHub.OtherUtilities
 {
     public class CameraFollower : MonoBehaviour
     {
-        private GameObject _target;
+        [SerializeField] private GameObject _target;
+
+        [SerializeField] private float _offset = 5f;
+
+        private Vector3 _lastPosition;
+        
         private bool _canFollow;
+
+        private void Start()
+        {
+            EnableFollow(true);
+        }
 
         public void SetTarget(GameObject target)
         {
@@ -17,20 +27,23 @@ namespace CodeHub.OtherUtilities
             _canFollow = enable;
         }
 
+        public void SetTargetPosition(Vector3 target)
+        {
+            _canFollow = false;
+            transform.position = new Vector3(target.x - _offset, transform.position.y,
+                transform.position.z);
+            _canFollow = true;
+        }
+
         private void LateUpdate()
         {
             if (_target == null || !_canFollow) return;
 
-            if (transform.position.y > 0)
-            {
-                transform.position = Vector3.zero;
+            if (_target.transform.position.x < -_offset) return;
 
-                return;
-            }
+            if (_target.transform.position.x + _offset < transform.position.x) return;
 
-            if (_target.transform.position.y > 0) return;
-
-            Vector3 newPos = new Vector3(transform.position.x, _target.transform.position.y,
+            Vector3 newPos = new Vector3(_target.transform.position.x + _offset, transform.position.y,
                 transform.position.z);
             transform.position = newPos;
         }
