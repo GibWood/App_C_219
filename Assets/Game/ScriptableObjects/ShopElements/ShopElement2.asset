@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _price: 500
   _levelTheme: {fileID: 21300000, guid: 0fbf5b00b251145c3b79fb5e71ae372a, type: 3}
+  _levelPrefab: {fileID: 3245828512253628859, guid: f219e5bbf6a7d487cbf0c80106a3edb3, type: 3}

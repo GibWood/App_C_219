@@ -22,8 +22,12 @@ namespace Game.Scripts.Game.CoreGame.BirdsLogic
         private void ReleaseBird(Bird bird) =>
             bird.gameObject.SetActive(false);
 
-        private void GetBird(Bird platform) =>
-            platform.gameObject.SetActive(true);
+        private void GetBird(Bird bird)
+        {
+            if (bird == null) return;
+
+            bird.gameObject.SetActive(true);
+        }
 
         private Bird CreateBird()
         {

@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2160836117828466283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09180138, y: -0.222, z: 0}
+  m_LocalPosition: {x: -0.09180138, y: -0.278, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3530132857229269225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.188, z: 0}
+  m_LocalPosition: {x: 0, y: -0.301, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -216,14 +216,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelRenderer: {fileID: 8588959001340885605}
-  _startPlatforms: []
   _startPlatformPosition: {fileID: 2837986463699343825}
   _topPlatformPosition: {fileID: 5182623069384454192}
   _bottomPlatformPosition: {fileID: 51430093173715315}
+  _rotateObjects:
+  - {fileID: 8588959002286391182}
   _minDistance: 4
   _maxDistance: 6.5
   _minCountPlatforms: 2
   _maxCountPlatforms: 3
+  StartLevel: 0
 --- !u!212 &8588959001340885605
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -386,7 +388,7 @@ Transform:
   m_GameObject: {fileID: 8588959002286391182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3442, y: -0.268, z: 0}
-  m_LocalScale: {x: 0.025117805, y: 0.047088735, z: 0.026412535}
+  m_LocalScale: {x: 0.02511781, y: 0.047088735, z: 0.026412535}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8588959001340885626}

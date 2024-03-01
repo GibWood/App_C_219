@@ -12,7 +12,7 @@ namespace CodeHub.OtherUtilities
         private void Start()
         {
             _playerDatabase.OnPlayerRecordChange += UpdatePlayerRecordsTxt;
-            UpdatePlayerRecordsTxt(_playerDatabase.PlayerRecord);
+            UpdatePlayerRecordsTxt(_playerDatabase.PlayerCrystal);
         }
 
         private void UpdatePlayerRecordsTxt(int value)

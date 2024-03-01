@@ -7,19 +7,12 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
     public class SpinePlatformerAnimation2D : MonoBehaviour
     {
         [SerializeField] private SkeletonAnimation skeletonAnimation;
-        [SerializeField] private PlatformerMotor2D platformerMotor2D;
         [SerializeField] private AnimationReferenceAsset idle;
-        [SerializeField] private AnimationReferenceAsset jump;
-        [SerializeField] private AnimationReferenceAsset fall;
-        [SerializeField] private AnimationReferenceAsset slipping;
-        [SerializeField] private AnimationReferenceAsset walk;
-        [SerializeField] private AnimationReferenceAsset getHit;
-        [SerializeField] private AnimationReferenceAsset attack;
+        [SerializeField] private AnimationReferenceAsset fly;
+        [SerializeField] private AnimationReferenceAsset land;
+        [SerializeField] private AnimationReferenceAsset throwHook;
 
         public SkeletonAnimation SkeletonAnimation => skeletonAnimation;
-
-        private PlatformerMotor2D _motor;
-        private bool _isJumping;
 
         private bool _canMakeDefaultAnimation;
 
@@ -28,81 +21,27 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
         // Use this for initialization
         private void Start()
         {
-            _motor = platformerMotor2D;
             _canMakeDefaultAnimation = true;
-            //todo change 
-            return;
+        }
+
+        public void PlayFlyAnimation()
+        {
+            skeletonAnimation.state.SetAnimation(0, fly, true);
+        }
+
+        public void PlayIdleAnimation()
+        {
             skeletonAnimation.state.SetAnimation(0, idle, true);
         }
 
-        // Update is called once per frame
-        private void Update()
+        public void PlayLandAnimation()
         {
-            return;
-            if (_motor.motorState == PlatformerMotor2D.MotorState.Jumping ||
-                _isJumping &&
-                (_motor.motorState == PlatformerMotor2D.MotorState.Falling ||
-                 _motor.motorState == PlatformerMotor2D.MotorState.FallingFast))
-            {
-                _isJumping = true;
-
-                TrySetAnimation(jump);
-            }
-            else
-            {
-                _isJumping = false;
-                skeletonAnimation.transform.rotation = Quaternion.identity;
-
-                if (_motor.motorState == PlatformerMotor2D.MotorState.Falling ||
-                    _motor.motorState == PlatformerMotor2D.MotorState.FallingFast)
-                {
-                    TrySetAnimation(fall);
-                }
-                else if (_motor.motorState == PlatformerMotor2D.MotorState.Slipping)
-                {
-                    TrySetAnimation(slipping);
-                }
-                else
-                {
-                    if (_motor.velocity.sqrMagnitude >= 0.1f * 0.1f)
-                    {
-                        TrySetAnimation(walk);
-                    }
-                    else
-                    {
-                        TrySetAnimation(idle);
-                    }
-                }
-            }
-
-            // Facing
-            float valueCheck = _motor.normalizedXMovement;
-
-            if (_motor.motorState == PlatformerMotor2D.MotorState.Slipping ||
-                _motor.motorState == PlatformerMotor2D.MotorState.Dashing ||
-                _motor.motorState == PlatformerMotor2D.MotorState.Jumping)
-            {
-                valueCheck = _motor.velocity.x;
-            }
-
-            if (Mathf.Abs(valueCheck) >= 0.1f)
-            {
-                Vector3 newScale = skeletonAnimation.transform.localScale;
-                newScale.x = Mathf.Abs(newScale.x) * ((valueCheck > 0) ? 1.0f : -1.0f);
-                skeletonAnimation.transform.localScale = newScale;
-            }
+            skeletonAnimation.state.SetAnimation(0, land, false);
         }
 
-        public void PlayHitAnimation()
+        public void PlayThrowAnimation()
         {
-            skeletonAnimation.state.SetAnimation(0, getHit, false);
-            StopMakeAnimationForDelay(getHit.Animation.Duration);
-        }
-
-        public void PlayAttackAnimation()
-        {
-            skeletonAnimation.state.SetAnimation(0, attack, false);
-            StopMakeAnimationForDelay(attack.Animation.Duration);
+            skeletonAnimation.state.SetAnimation(0, throwHook, false);
         }
 
         private void TrySetAnimation(AnimationReferenceAsset animation, bool loop = true)

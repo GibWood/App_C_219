@@ -8,11 +8,12 @@ namespace Game.Scripts.Game.CoreGame.Level
     public class LevelPart : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer _levelRenderer;
-        [SerializeField] private List<Platform> _startPlatforms;
         [SerializeField] private Transform _startPlatformPosition;
 
         [SerializeField] private Transform _topPlatformPosition;
         [SerializeField] private Transform _bottomPlatformPosition;
+
+        [SerializeField] private List<GameObject> _rotateObjects;
 
         [SerializeField] private float _minDistance;
         [SerializeField] private float _maxDistance;
@@ -22,6 +23,7 @@ namespace Game.Scripts.Game.CoreGame.Level
         public float Width => _levelRenderer.bounds.size.x;
         public float PositionX => transform.position.x;
         public bool HasActive { get; private set; }
+        public bool StartLevel;
 
         private PlatformsPool _platformsPool;
 
@@ -35,9 +37,11 @@ namespace Game.Scripts.Game.CoreGame.Level
         public void Setup(PlatformsPool platformsPool, bool generatePlatforms = true)
         {
             _platformsPool = platformsPool;
-            
+
             if (generatePlatforms)
                 GeneratePlatforms();
+
+            RotateBackgroundObjects();
         }
 
         public void ReleaseAllPlatforms()
@@ -46,21 +50,6 @@ namespace Game.Scripts.Game.CoreGame.Level
                 _platformsPool.Release(platform);
 
             _platforms.Clear();
-
-            //for safe level
-            ClearStartPlatformsForSafeLevel();
-        }
-
-        private void ClearStartPlatformsForSafeLevel()
-        {
-            int startPlatformsCount = _startPlatforms.Count;
-            if (startPlatformsCount == 0)
-                return;
-
-            for (int i = 0; i < startPlatformsCount; i++)
-                Destroy(_startPlatforms[i].gameObject);
-
-            _startPlatforms.Clear();
         }
 
         private void GeneratePlatforms()
@@ -75,6 +64,20 @@ namespace Game.Scripts.Game.CoreGame.Level
             firstPlatform.InitForUse();
             firstPlatform.transform.position = new Vector3(_startPlatformPosition.position.x, GetRandomYPosition());
             _platforms.Add(firstPlatform);
+        }
+
+        private void RotateBackgroundObjects()
+        {
+            int randomValue = Random.Range(0, 100);
+            if (randomValue > 50)
+                return;
+
+            foreach (var rotateObject in _rotateObjects)
+            {
+                var transformLocalScale = rotateObject.transform.localScale;
+                rotateObject.transform.localScale =
+                    new Vector3(-transformLocalScale.x, transformLocalScale.y, transformLocalScale.z);
+            }
         }
 
         private void InitPlatforms()

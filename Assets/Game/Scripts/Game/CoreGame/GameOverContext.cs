@@ -65,6 +65,8 @@ namespace Game.Scripts.Game.CoreGame
         {
             _crystalCountTxt.text = _crystalCount.ToString();
             _crystalNewRecordMark.gameObject.SetActive(_crystalCount > _playerDatabase.PlayerCrystal);
+            if (_crystalCount == 0)
+                DisableAdsObjects();
         }
 
         private void UpdateCoinsUI() =>
@@ -79,6 +81,11 @@ namespace Game.Scripts.Game.CoreGame
             _coinsCount *= 2;
             UpdateCoinsUI();
 
+            DisableAdsObjects();
+        }
+
+        private void DisableAdsObjects()
+        {
             _watchAdsBtn.gameObject.SetActive(false);
             _watchAdsTxtTxt.gameObject.SetActive(false);
 

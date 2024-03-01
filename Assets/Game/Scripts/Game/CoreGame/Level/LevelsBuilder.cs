@@ -18,6 +18,8 @@ namespace Game.Scripts.Game.CoreGame.Level
         private List<LevelPart> _levelParts = new List<LevelPart>();
         private int _maxLevelPartsCount = 3;
 
+        private Vector3 _startLevelPosition;
+
         private bool _canBuild;
 
         public bool CanBuild => _canBuild;
@@ -30,6 +32,8 @@ namespace Game.Scripts.Game.CoreGame.Level
             _levelParts.Add(_startLevelPart);
 
             EnableBuild(true);
+
+            _startLevelPosition = _startLevelPart.transform.position;
         }
 
         private void Update()
@@ -56,10 +60,8 @@ namespace Game.Scripts.Game.CoreGame.Level
             ReleaseLevelPart(lastLevelPart);
         }
 
-        private void EnableBuild(bool enable)
-        {
+        private void EnableBuild(bool enable) => 
             _canBuild = enable;
-        }
 
         private void InitNextLevelPart(LevelPart frontLevel)
         {
@@ -67,7 +69,7 @@ namespace Game.Scripts.Game.CoreGame.Level
 
             LevelPart nextLevelPart = _levelPartsPool.Get();
             nextLevelPart.transform.position = new Vector3(nextLevelPositionX,
-                _startLevelPart.transform.position.y, _startLevelPart.transform.position.z);
+                _startLevelPosition.y,_startLevelPosition.z);
             nextLevelPart.SetActiveStatus(true);
 
             nextLevelPart.Setup(_platformsPool);
@@ -77,6 +79,12 @@ namespace Game.Scripts.Game.CoreGame.Level
 
         private void ReleaseLevelPart(LevelPart levelPart)
         {
+            if (levelPart.StartLevel)
+            {
+                Destroy(levelPart.gameObject);
+                return;
+            }
+
             levelPart.ReleaseAllPlatforms();
             _levelPartsPool.Release(levelPart);
             levelPart.SetActiveStatus(false);
