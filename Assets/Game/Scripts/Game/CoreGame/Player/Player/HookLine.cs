@@ -21,11 +21,11 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
 
         public event Action OnCaptured;
 
-        private void Update() =>
+        private void Update()
+        {
             DrawLine();
-
-        private void LateUpdate() =>
             MoveLine(_target);
+        }
 
         public void EnableLineRenderer(bool enable)
         {

@@ -2489,8 +2489,8 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   updateTiming: 1
   unscaledTime: 0
-  _animationName: Throwing_the_rope
-  loop: 0
+  _animationName: Idle
+  loop: 1
   timeScale: 1
 --- !u!114 &8953350391265553645
 MonoBehaviour:

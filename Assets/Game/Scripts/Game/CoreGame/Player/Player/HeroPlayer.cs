@@ -23,7 +23,6 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
         {
             _playerData = new PlayerData(maxHp);
             _cameraShaker = cameraShaker;
-            _spine.PlayIdleAnimation();
         }
 
         public void GetDamage(int value = -1)
