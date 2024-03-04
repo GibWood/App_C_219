@@ -157,7 +157,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.mefistofel
     Standalone: com.DefaultCompany.2DProject
-    iPhone: com.mefistofel
+    iPhone: com.mefistofel.c219
   buildNumber:
     Standalone: 0
     iPhone: 0
