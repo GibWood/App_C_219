@@ -54,6 +54,9 @@ namespace Game.Scripts.Game.CoreGame.BirdsLogic
         private void SpawnBird()
         {
             var bird = _birdsPool.Get();
+
+            if (bird == null) return;
+
             bird.transform.position = new Vector3(_spawnPosition.position.x,
                 _spawnPosition.position.y + Random.Range(-0.8f, 0.5f));
             bird.Initialize(this, _heroPlayer);

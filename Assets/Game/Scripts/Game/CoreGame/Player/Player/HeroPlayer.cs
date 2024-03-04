@@ -28,9 +28,7 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
         public void GetDamage(int value = -1)
         {
             PlayerData.IncreaseHp(value);
-
-            //_spinePlatformerAnimation2D.PlayHitAnimation();
-
+            
             _cameraShaker.Shake();
 
             _heroPlayerAudioContext.PlayPlayerHitAudio();

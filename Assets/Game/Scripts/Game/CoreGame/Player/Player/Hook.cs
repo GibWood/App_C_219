@@ -12,7 +12,7 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
         [SerializeField] private SpinePlatformerAnimation2D _spine;
 
         [SerializeField] private BirdsSpawner _birdsSpawner;
-
+        [SerializeField] private AudioSource _hookAudio;
 
         [SerializeField] private float _offset = 0.5f;
 
@@ -22,7 +22,7 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
         {
             _hookBtn.OnDown += MakeHook;
             _hookBtn.OnUp += StopMakeHook;
-            
+
             _hookLine.EnableLineRenderer(false);
             _hookLine.OnCaptured += CapturedBird;
 
@@ -44,8 +44,9 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
 
             _hookLine.MoveLine(true, _currentBird.transform);
             _hookLine.EnableLineRenderer(true);
-            
+
             _spine.PlayThrowAnimation();
+            _hookAudio.Play();
         }
 
         private void CapturedBird()
@@ -53,7 +54,7 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
             _currentBird.GetComponent<BirdMove>().SetSlowSpeed();
             _currentBird.Capture();
             _heroMover.MoveHero(_currentBird.transform);
-            
+
             _spine.PlayFlyAnimation();
         }
 
@@ -63,11 +64,11 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
             _hookLine.MoveLine(false);
             _hookLine.EnableLineRenderer(false);
 
-            if (_currentBird != null && _currentBird.Captured) 
+            if (_currentBird != null && _currentBird.Captured)
                 _currentBird.GetComponent<BirdMove>().MoveAway = true;
 
             _currentBird = null;
-            
+
             _spine.PlayIdleAnimation();
         }
 

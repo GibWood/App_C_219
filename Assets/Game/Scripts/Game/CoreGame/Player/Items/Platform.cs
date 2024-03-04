@@ -10,8 +10,8 @@ namespace Game.Scripts.Game.CoreGame.Player.Items
         [SerializeField] private int _chanceDropItem = 10;
 
         [SerializeField] private float _shakeDuration = 0.5f;
-        [SerializeField] private float _shakeStrength = 0.05f; 
-        [SerializeField] private int _vibrato = 5; 
+        [SerializeField] private float _shakeStrength = 0.05f;
+        [SerializeField] private int _vibrato = 5;
         [SerializeField] private float _randomness = 45f;
 
         public bool _triggered;
@@ -33,9 +33,12 @@ namespace Game.Scripts.Game.CoreGame.Player.Items
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.GetComponent<HeroPlayer>() == null || _triggered) return;
+            var heroPlayer = other.GetComponent<HeroPlayer>();
+            if (heroPlayer == null || _triggered) return;
 
-            other.GetComponent<HeroPlayer>().PlayerData.IncreaseGolds(1);
+            heroPlayer.PlayerData.IncreaseGolds(1);
+            heroPlayer.HeroPlayerAudioContext.PlayGroundAudio();
+
             ShakePlatform();
             _triggered = true;
         }

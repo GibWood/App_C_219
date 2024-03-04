@@ -5,23 +5,23 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
     public class HeroPlayerAudioContext : MonoBehaviour
     {
         [SerializeField] private AudioSource _hitPlayerAudio;
-        [SerializeField] private AudioSource _deadPlayerAudio;
+        [SerializeField] private AudioSource _groundAudio;
         
-        [SerializeField] private AudioSource _coinTakeAudio;
+        [SerializeField] private AudioSource _goldTakeAudio;
 
         public void PlayPlayerHitAudio()
         {
-            //PlayAudio(_hitPlayerAudio);
+            PlayAudio(_hitPlayerAudio);
         }
 
-        public void PlayDeadPlayerAudio()
+        public void PlayGroundAudio()
         {
-            PlayAudio(_deadPlayerAudio);
+            PlayAudio(_groundAudio);
         }
 
         public void PlayGoldTakeAudio()
         {
-            //PlayAudio(_coinTakeAudio);
+            PlayAudio(_goldTakeAudio);
         }
 
         private void PlayAudio(AudioSource audioSource)

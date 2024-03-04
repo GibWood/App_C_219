@@ -41,6 +41,8 @@ namespace Game.Scripts.Game.CoreGame.Player.Player
 
         public void MoveLine(bool enable, Transform target = null)
         {
+            EnableCaptureStatus(false);
+            
             _target = target;
             _canMove = enable;
         }

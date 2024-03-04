@@ -28,6 +28,9 @@ namespace Game.Scripts.Game.CoreGame
         [SerializeField] private List<GameObject> _adsObjects;
         [SerializeField] private List<GameObject> _getRewardsObjects;
 
+        [SerializeField] private AudioSource _gameOver;
+        [SerializeField] private AudioSource _rewardAds;
+
         private int _crystalCount;
         private int _coinsCount;
 
@@ -46,6 +49,8 @@ namespace Game.Scripts.Game.CoreGame
 
             ClaimCoinsReward();
             UpdateDataCrystal();
+
+            _gameOver.Play();
         }
 
         private void UpdateDataCrystal()
@@ -82,6 +87,8 @@ namespace Game.Scripts.Game.CoreGame
             UpdateCoinsUI();
 
             DisableAdsObjects();
+
+            _rewardAds.Play();
         }
 
         private void DisableAdsObjects()
