@@ -10,6 +10,7 @@ namespace Game.Scripts.Game.CoreGameLogic
         [SerializeField] private PanelMachine _panelMachine;
         [SerializeField] private PanelBase _leaveGamePanel;
         [SerializeField] private PanelBase _exitPanel;
+        [SerializeField] private PanelBase _restartPanel;
 
         public void AddPause()
         {
@@ -39,6 +40,11 @@ namespace Game.Scripts.Game.CoreGameLogic
         {
             _panelMachine.CloseLastPanel();
             _panelMachine.AddPanel(_exitPanel);
+        }
+        public void AddRestartPanel()
+        {
+            _panelMachine.CloseLastPanel();
+            _panelMachine.AddPanel(_restartPanel);
         }
 
         public void ReturnToPause()

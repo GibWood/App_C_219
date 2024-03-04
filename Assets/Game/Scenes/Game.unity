@@ -661,6 +661,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 948321180}
+        m_TargetAssemblyTypeName: Game.Scripts.Game.CoreGameLogic.LeaveGameContext,
+          Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &94810488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1804,6 +1817,19 @@ MonoBehaviour:
       - m_Target: {fileID: 1355456828}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 948321180}
+        m_TargetAssemblyTypeName: Game.Scripts.Game.CoreGameLogic.LeaveGameContext,
+          Assembly-CSharp
+        m_MethodName: ReturnToPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3878,7 +3904,7 @@ GameObject:
   - component: {fileID: 687680802}
   - component: {fileID: 687680801}
   m_Layer: 5
-  m_Name: RestartBtn
+  m_Name: RestartPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3920,8 +3946,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelObject: {fileID: 687680799}
-  objectToAnim: {fileID: 1904695522}
-  escapeKeyPressed: 1
+  objectToAnim: {fileID: 0}
+  escapeKeyPressed: 0
 --- !u!114 &687680802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5142,6 +5168,7 @@ MonoBehaviour:
   _panelMachine: {fileID: 1808032185}
   _leaveGamePanel: {fileID: 435625129}
   _exitPanel: {fileID: 673846874}
+  _restartPanel: {fileID: 687680801}
 --- !u!1 &987817347
 GameObject:
   m_ObjectHideFlags: 0
@@ -6467,7 +6494,7 @@ MonoBehaviour:
       - m_Target: {fileID: 948321180}
         m_TargetAssemblyTypeName: Game.Scripts.Game.CoreGameLogic.LeaveGameContext,
           Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: AddRestartPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7723,7 +7750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelObject: {fileID: 1527518063}
   objectToAnim: {fileID: 797292224}
-  escapeKeyPressed: 1
+  escapeKeyPressed: 0
 --- !u!114 &1527518066
 MonoBehaviour:
   m_ObjectHideFlags: 0
