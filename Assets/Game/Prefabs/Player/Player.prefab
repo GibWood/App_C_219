@@ -81,6 +81,7 @@ MonoBehaviour:
   _hookBtn: {fileID: 0}
   _spine: {fileID: 1715214563353604515}
   _birdsSpawner: {fileID: 0}
+  _hookAudio: {fileID: 0}
   _offset: 0.5
 --- !u!114 &2064394573
 MonoBehaviour:
@@ -2614,7 +2615,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017997503, y: -0.0021446943}
+  m_Offset: {x: 0.010513097, y: -0.0021446943}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2625,7 +2626,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.78590345, y: 1.8109932}
+  m_Size: {x: 0.7239292, y: 1.8109932}
   m_EdgeRadius: 0
 --- !u!50 &6672208729649258417
 Rigidbody2D:
@@ -2694,8 +2695,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitPlayerAudio: {fileID: 0}
-  _deadPlayerAudio: {fileID: 0}
-  _coinTakeAudio: {fileID: 0}
+  _groundAudio: {fileID: 0}
+  _goldTakeAudio: {fileID: 0}
 --- !u!114 &1683599430
 MonoBehaviour:
   m_ObjectHideFlags: 0
