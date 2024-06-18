@@ -39,6 +39,12 @@ namespace Game.Scripts.Game.ShopLogic
             _animationService = new AnimationService();
         }
 
+        public void UpdateStatusBtnByPrice()
+        {
+            foreach (var shopBtn in _shopBtns) 
+                shopBtn.BuyBtn.interactable = _playerDatabase.PlayerBalance>=shopBtn.ElementData.Price;
+        }
+
         private void ClickOnBuyShopElement(ElementShopBtn elementBtn)
         {
             _currentShopElementBtn = elementBtn;
@@ -80,7 +86,9 @@ namespace Game.Scripts.Game.ShopLogic
             {
                 shopBtn.UpdateUI();
             }
-
+            
+            UpdateStatusBtnByPrice();
+            
             TrySelectCurrentElement();
         }
 

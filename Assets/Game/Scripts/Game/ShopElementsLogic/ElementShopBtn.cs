@@ -10,9 +10,11 @@ namespace Game.Scripts.Game.ShopLogic
 
         [SerializeField] private Button _buyBtn;
         [SerializeField] private Button _selectBtn;
-        
+
         [SerializeField] private GameObject _selectMark;
-        
+
+        public Button BuyBtn => _buyBtn;
+
         public ShopElementData ElementData => _elementData;
         public Action<ElementShopBtn> onBuy;
         public Action<ElementShopBtn> onSelect;
@@ -29,7 +31,7 @@ namespace Game.Scripts.Game.ShopLogic
                 _buyBtn.gameObject.SetActive(false);
                 _selectBtn.gameObject.SetActive(true);
             }
-            
+
             _selectMark.SetActive(false);
         }
 
