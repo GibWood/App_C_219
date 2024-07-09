@@ -3089,6 +3089,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 816508184}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &594800427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3860,6 +3872,263 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787770604}
   m_CullTransparentMesh: 1
+--- !u!1001 &816508183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2063936198389768265, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936198389768265, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936198389768265, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.6965175
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034562, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Name
+      value: '[Privacy_Scroll]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034562, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199821136152, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Text
+      value: 'This Privacy Policy explains how we collect, use and protect your personal
+        information on our website (the "Site"). Please read this policy carefully
+        before using the Site.
+
+
+        Collection of information
+
+
+        We may
+        collect information when you register on the Site, fill out forms, register
+        on resources we link to, or otherwise interact with the Site. The information
+        we may collect includes your name, email address, contact information and
+        other information you provide to us.
+
+
+        Use of information
+
+
+        We
+        use your personal information to provide access to the Site, send you information
+        and notifications, respond to your requests, and ensure the quality of our
+        services. We do not disclose your personal information to third parties without
+        your consent, unless required by law.
+
+
+        Protection of information
+
+
+        We
+        take reasonable steps to protect your personal information from unauthorised
+        access, loss, alteration or disclosure. However, there can be no guarantee
+        of complete security over Internet transmission and you do so at your own
+        risk.Welcome to the App!
+
+
+        These terms and conditions set out the
+        rules and regulations for the use of the App. By using the App, we assume
+        that you accept these terms and conditions. Do not continue to use the App
+        if you do not agree to be bound by all of the terms and conditions set out
+        on this page.
+
+
+        The following terminology applies to these Terms
+        and Conditions, the Privacy Statement and the Disclaimer, and to all Agreements:
+        "Client", "you" and "your" refer to you, the person accessing this website
+        and complying with the Company''s terms and conditions. "Company", "We",
+        "Our" and "Us" refer to our Company. "Party", "Parties" or "Us" refers to
+        both the Client and us. All terms refer to the offer, acceptance and consideration
+        of payment necessary to carry out the process of our assistance to the Client
+        in the most appropriate manner to meet the Client''s needs for the provision
+        of the Company''s stated services, in accordance with and subject to the
+        applicable laws of the Netherlands. The use of the above terminology or other
+        words in singular, plural, capitalised and/or he/she or they shall be deemed
+        interchangeable and therefore refer to the same.
+
+
+        Licence
+
+
+        Unless
+        otherwise stated, the App and/or its licensors own the intellectual property
+        rights to all material on the App. All intellectual property rights are reserved.
+        You may access this from the App for your own personal use, subject to the
+        restrictions set out in these terms and conditions.
+
+
+        You may not:
+
+
+        Republish
+        material from the App;
+
+        Sell, rent or sub-license material from the
+        App;
+
+        Reproduce, duplicate or copy material from the App;
+
+        Redistribute
+        content from the App.
+
+        This Agreement starts from the date of its
+        signing.
+
+
+        Parts of the App provide users with the ability to post
+        and share opinions and information in certain areas of the website. App does
+        not filter, edit, publish or review comments before they appear on the website.
+        Comments do not reflect the views and opinions of App, its agents and/or
+        affiliates. Comments reflect the views and opinions of the person posting
+        their views and opinions. To the extent permitted by applicable laws, App
+        is not responsible for the Comments or for any liability, loss or damage
+        caused and/or suffered as a result of any use and/or publication and/or appearance
+        of the Comments on this website.
+
+
+        App reserves the right to monitor
+        all Comments and to remove any Comments that may be deemed inappropriate,
+        offensive or in breach of these Terms and Conditions.
+
+
+        You warrant
+        and represent that:
+
+
+        You have the right to post Comments on the
+        App and have all necessary licences and consents to do so;
+
+        The Comments
+        do not violate any intellectual property right, including but not limited
+        to any copyright, patent or trademark of any third party;
+
+        Comments
+        do not contain any defamatory, obscene, abusive, indecent or otherwise unlawful
+        material that constitutes an invasion of privacy
+
+        Comments will not
+        be used to solicit or advertise a business or custom or to represent commercial
+        activity or illegal activity.
+
+        You hereby grant App a non-exclusive
+        licence to use, reproduce, edit and authorise others to use, reproduce and
+        edit any of your Comments in any form, format or media.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199821136158, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 916.0345
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199821136158, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936200381917328, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Text
+      value: Privacy Policy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+--- !u!1 &816508184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2063936199072034562, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+  m_PrefabInstance: {fileID: 816508183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &820336755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,6 +4164,228 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &875112152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2063936198389768265, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936198389768265, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936198389768265, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.60258305
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034562, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Name
+      value: '[Terms_Scroll]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034562, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199072034622, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199300820501, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199300820501, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199821136152, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Text
+      value: 'These Terms of Use (the "Terms") set out your rights and obligations
+        when using our Website. By continuing to use the Site, you agree to be bound
+        by these Terms. If you do not agree to the Terms, please stop using the Website.
+
+
+        Rights
+        and licence.
+
+
+        You may use the Site in accordance with these Terms
+        and all applicable laws and regulations. We grant you a limited, non-exclusive,
+        non-transferable licence to use the Site for your personal use. You may not
+        distribute, transmit, sell, reproduce, publish, exploit commercially or create
+        derivative works based on the materials available on the Site without our
+        prior written consent.
+
+
+        Limitation of Liability.
+
+
+        We shall
+        not be liable for any direct or indirect damages, loss of profits or other
+        damages arising from the use of the Site or the inability to use it. We do
+        our best to ensure the availability and security of the Site, but we cannot
+        guarantee that the Site will be available uninterrupted or error-free.
+
+
+        Changes
+        to the Terms.
+
+
+        We may update these Terms from time to time. Please
+        check them periodically for the latest changes. Your continued use of the
+        Site after the Terms have been changed indicates your acceptance of the updated
+        Terms.
+
+
+        Use of the Content.
+
+
+        All content on the Site, including
+        text, images, videos and other materials, is our property or licensed from
+        third parties. You may view, copy and download this content for your personal
+        use and non-commercial purposes only.
+
+
+        Users under the age of 18.
+
+
+        This
+        site is not intended for users under the age of 18. We recommend that parents
+        and guardians provide appropriate supervision and assistance to children
+        in their use of the Site.
+
+
+        Violation of the Terms.
+
+
+        We
+        reserve the right to terminate your access to the Site if you violate these
+        Terms or the law. We may also take appropriate measures, including legal
+        action, in the event of unauthorised use of the Site.
+
+
+        Final provisions.
+
+
+        These
+        Terms constitute the entire agreement between you and us with respect to
+        the use of the Site and supersede all prior oral or written agreements. If
+        any provision of these Terms is found to be invalid or unenforceable, the
+        remaining provisions of the Terms will not be affected.
+
+
+        This expanded
+        text of the Terms of Use contains additional details and explanations regarding
+        the rights and obligations of users of the Website. It is always important
+        to ensure that the Terms of Use are clear and meet the requirements of your
+        business and the law.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199821136158, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 699.5173
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936199821136158, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2063936200381917328, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+      propertyPath: m_Text
+      value: Terms & Conditions
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+--- !u!1 &875112153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2063936199072034562, guid: 627731be0f7d24d6dbc4c46399aef849, type: 3}
+  m_PrefabInstance: {fileID: 875112152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &884005964
 GameObject:
   m_ObjectHideFlags: 0
@@ -9120,6 +9611,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 875112153}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2042741936
 MonoBehaviour:
