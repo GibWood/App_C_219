@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c271686df2617df419104eb2cca7e4b4, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  firebaseRemoteKey: gibskey
+  landingUrl: https://braissco.carrd.co/
+  additionalUrl: https://sportsdata-api.com
+  oneSignalAppID: 9bcf1c5f-dac9-4055-b68c-78d89a0d2086
+  privacyPoliceUrl: https://braissco.carrd.co/#privacy
+  termsOfUseUrl: https://braissco.carrd.co/#conditions
+  isDebug: 0
